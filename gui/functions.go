@@ -118,11 +118,14 @@ func newAttemptGrid() *gtk.Grid {
 }
 
 func drawCorrectPattern(gui *GuiElements, gs *GameState) {
-	// Todo recreate DAs
-	for i, circle := range gui.loseDialogCorrectPattern {
+	gui.loseDialogCorrect.GetChildren().Foreach(func(item interface{}) {
+		gui.loseDialogCorrect.Remove(item.(gtk.IWidget))
+	})
+	for i := 0; i < 4; i++ {
 		c := gs.code[i]
-		circle.Connect("draw", SetColor(Colors[c][0], Colors[c][1], Colors[c][2]))
+		addCircleToGrid(gui.loseDialogCorrect, Colors[c])
 	}
+	gui.loseDialogCorrect.ShowAll()
 }
 
 func startRandomGame(gui *GuiElements, gs *GameState) {

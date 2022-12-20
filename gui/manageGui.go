@@ -86,11 +86,8 @@ func BuildGui() (gui *GuiElements) {
 	})
 
 	gui.loseDialog = builder.MustGetObject("lose").(*gtk.Window)
+	gui.loseDialogCorrect = builder.MustGetObject("lose_correct_pattern").(*gtk.Grid)
 	gui.loseDialogOk = builder.MustGetObject("lose_ok").(*gtk.Button)
-	for i := 0; i < 4; i++ {
-		id := fmt.Sprintf("lose_pattern_%d", i+1)
-		gui.loseDialogCorrectPattern[i] = builder.MustGetObject(id).(*gtk.DrawingArea)
-	}
 	gui.loseDialog.Connect("delete-event", func() bool {
 		gui.loseDialog.Hide()
 		return true

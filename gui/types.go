@@ -33,9 +33,9 @@ type GuiElements struct {
 	winDialog            *gtk.Window
 	winDialogOk          *gtk.Button
 
-	loseDialog               *gtk.Window
-	loseDialogCorrectPattern [4]*gtk.DrawingArea
-	loseDialogOk             *gtk.Button
+	loseDialog        *gtk.Window
+	loseDialogCorrect *gtk.Grid
+	loseDialogOk      *gtk.Button
 }
 
 type GameState struct {
