@@ -250,6 +250,9 @@
     <property name="modal">True</property>
     <property name="default-width">200</property>
     <property name="default-height">100</property>
+    <property name="destroy-with-parent">True</property>
+    <property name="type-hint">dialog</property>
+    <property name="skip-taskbar-hint">True</property>
     <property name="urgency-hint">True</property>
     <child>
       <object class="GtkBox">
@@ -344,17 +347,16 @@
   </object>
   <object class="GtkDialog" id="new_game_dialog">
     <property name="can-focus">False</property>
-    <property name="margin-start">5</property>
-    <property name="margin-end">5</property>
-    <property name="margin-top">5</property>
-    <property name="margin-bottom">5</property>
     <property name="title" translatable="yes">New Game</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="default-width">320</property>
     <property name="default-height">260</property>
+    <property name="destroy-with-parent">True</property>
     <property name="icon-name">media-playback-start</property>
     <property name="type-hint">dialog</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="type_select">
         <property name="can-focus">False</property>
@@ -471,7 +473,10 @@
     <property name="title" translatable="yes">Set the code</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
+    <property name="destroy-with-parent">True</property>
     <property name="type-hint">dialog</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="preset_box">
         <property name="can-focus">False</property>
@@ -708,6 +713,9 @@
     <property name="modal">True</property>
     <property name="default-width">200</property>
     <property name="default-height">100</property>
+    <property name="destroy-with-parent">True</property>
+    <property name="type-hint">dialog</property>
+    <property name="skip-taskbar-hint">True</property>
     <property name="urgency-hint">True</property>
     <child>
       <object class="GtkBox">
