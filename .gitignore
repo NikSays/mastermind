@@ -1,0 +1,11 @@
+*
+!*.go
+!gui.glade
+
+!go.mod
+!go.sum
+
+!*.md
+!.gitignore
+
+!*/
